@@ -18,3 +18,15 @@ body {
     padding: 20px;
     background-color: greenyellow;
 }
+.post{
+    background-color: whitesmoke;
+}
+.post-title {
+  color: crimson;
+  font-size: 2rem;
+}
+
+.post-body {
+  color: #333;
+  line-height: 1.6;
+}

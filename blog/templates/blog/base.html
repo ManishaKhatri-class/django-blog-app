@@ -36,8 +36,14 @@
               	</div>
               	<!--navbar right side-->
               	<div class="navbar-nav">
-              		<a class="nav-item nav-link" href="/">Login </a>
-              		<a class="nav-item nav-link" href="/">Register</a>
+              		 <form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit" class="nav-item nav-link btn btn-link" style="border:none; background:none;">
+      Logout
+    </button>
+  </form>
+              		<a class="nav-item nav-link" href="{% url 'login' %}">Login </a>
+              		<a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
               </div>
           </div>
       </div>
@@ -47,7 +53,15 @@
 	<main  class="main" role="main" class="container">
 		<div class="row">
 			<div class="col-md-8">
+				{% if messages %}
+				{% for message in messages %}
+				<div class="alert alert-{{ message.tags }}">
+					{{ message }}
+				</div>
+				{% endfor %}
+				{%endif %}
 				{% block content %}
+				
 
 	{% endblock %}
 			</div>
