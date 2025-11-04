@@ -8,5 +8,3 @@ urlpatterns = [
     path('', views.home,name='blog-home'),
     path('about/',views.about,name='blog-about')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-
