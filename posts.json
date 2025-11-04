@@ -1,0 +1,80 @@
+[
+  {
+    
+      "title": "Welcome to My New Blog!",
+      
+      "content": "I’m excited to finally launch this blog! I’ll be sharing my thoughts, ideas, and projects here. Expect posts about technology, productivity, and random musings from time to time.\n\nThanks for stopping by — feel free to leave a comment or say hi!",
+      "user_id": 1
+    
+  },
+  {
+    
+      "title": "5 Tools I Can’t Live Without as a Developer",
+      "content": "Every developer has a set of tools they rely on daily. For me, it’s VS Code, Git, Docker, Postman, and Notion. Each one plays a unique role in helping me stay productive and organized.\n\nWhat are your go-to tools?",
+       "user_id": 3
+    
+  },
+  {
+    
+      "title": "How I Stay Focused While Working from Home",
+      
+      "content": "Working from home can be tricky, but I’ve learned a few habits that make a big difference:\n1. Have a dedicated workspace.\n2. Set a clear schedule.\n3. Take short breaks to recharge.\n\nIt’s all about balance!",
+     "user_id": 1
+    
+  },
+  {
+    
+      "title": "Django Tips for Beginners",
+      "content": "Django is one of the most beginner-friendly web frameworks out there. If you’re new to it, start by understanding the MTV pattern, learning how to use the ORM, and experimenting with the admin panel.\n\nSmall projects are the best way to learn.",
+       "user_id": 2
+    
+  },
+  {
+   
+      "title": "My Weekend Coffee Ritual",
+ 
+      "content": "Saturday mornings are for coffee and quiet. I love grinding fresh beans, brewing slowly, and enjoying the smell of roasted perfection. It’s a simple ritual, but it resets my mind for the week ahead.",
+       "user_id": 1
+    
+  },
+  {
+    
+      "title": "The Importance of Side Projects",
+   
+      "content": "Side projects keep your skills sharp and your creativity flowing. They’re a great way to learn new technologies without the pressure of deadlines. My current one? Building a small weather app using Django and React.",
+       "user_id": 3
+    
+  },
+  {
+    
+      "title": "What I Learned from Reading One Book a Month",
+   
+      "content": "I challenged myself to read one book a month for a year — and it changed how I think. Slowing down and focusing on long-form reading has improved my focus and creativity. Highly recommend!",
+      "user_id": 1
+    
+  },
+  {
+
+      "title": "Exploring Minimalist Web Design",
+   
+      "content": "Clean, simple designs are not only beautiful — they’re functional. Minimalism helps users focus on what really matters. White space, typography, and contrast are your best friends here.",
+       "user_id": 2
+    
+  },
+  {
+    
+      "title": "How to Deploy a Django App on Render",
+      
+      "content": "Deploying a Django project can seem intimidating, but platforms like Render make it surprisingly easy. In this post, I walk through setting up a free account, connecting your GitHub repo, and configuring environment variables.",
+      "user_id": 1
+    
+  },
+  {
+    
+      "title": "Reflections on Learning to Code",
+     
+      "content": "When I first started coding, I had no idea where it would take me. There were frustrating days, but also moments of pure excitement when something finally worked. If you’re starting out — keep going. It’s worth it.",
+     "user_id": 3
+    
+  }
+]
