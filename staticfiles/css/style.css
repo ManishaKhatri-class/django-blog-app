@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    border: 5px solid red !important;  /* for debug */
+}
+
+.navbar {
+    background-color: black !important;
+    color: olive !important;
+    margin: 100px !important;
+}
+
+.main {
+    color: darkred;
+    margin: 20px;
+    padding: 10px;
+    background-color: greenyellow;
+}
