@@ -25,7 +25,7 @@ class PostListView(ListView):
 	template_name='blog/home.html'#create post_list.html in templates in views.py 
 	context_object_name='posts'
 	ordering=['-date_posted']#sort posts
-	paginate_by=5 #pagination so to adjust posts on pagees
+	paginate_by=3 #pagination so to adjust posts on pagees
 
 
 
