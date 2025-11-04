@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Post
+from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.views.generic import (ListView,
 DetailView,
@@ -51,7 +52,7 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
 
 class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
 	model =Post
-	
+	success_url=reverse_lazy('blog-home')#redirect back to home page
 	def test_func(self):
 		post=self.get_object()
 		if self.request.user ==post.author:
