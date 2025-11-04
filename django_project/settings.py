@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-ic$-&j!r(q%=y4imkg=41_03(+wnyqf5q!d17$hv@_%$07prd3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
+
 # Application defini
 INSTALLED_APPS = [
 
@@ -128,4 +129,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 LOGIN_REDIRECT_URL='blog-home'
+LOGIN_URL='login'
+LOGOUT_URL='logout'
 

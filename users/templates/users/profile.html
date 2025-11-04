@@ -1,0 +1,10 @@
+<!-- Author: MANISHA RANI -->
+
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<h1>{{ user.username}}</h1>
+	<img src="{{user.image}}" />
+
+{% endblock %}
+
