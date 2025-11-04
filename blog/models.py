@@ -1,3 +1,8 @@
 from django.db import models
-
-# Create your models here.
+from django.utils import timezone
+from django.contrib.auth.models import User
+class Post(models.Model):
+	title=models.CharField(max_length=100)
+	content=models.TextField()
+	date_posted=models.DateTimeField(default=timezone.now)#auto_now_add=True when we need only date when post is posted , default=timezone.now when we ant to chnage dtae modified
+	author=models.ForeignKey(User,on_delete=models.CASCADE)#when we want unique author for his post and also delete post when author deleted
