@@ -18,17 +18,23 @@ body {
     padding: 20px;
     background-color: greenyellow;
 }
-.post{
+.article{
     background-color: whitesmoke;
+        margin-top: 20px;
+        padding: 20px;
 }
-.post-title {
+.article-title{
   color: crimson;
   font-size: 2rem;
 }
 
-.post-body {
+.article-content{
   color: #333;
   line-height: 1.6;
+}
+.article-img{
+     width: 30px !important;
+    height: 30px !important;
 }
 /*style profile image of user*/
 .profile-container {
