@@ -1,16 +1,39 @@
 <!-- Author: MANISHA RANI -->
-
 {% extends "blog/base.html" %}
-
+{% load crispy_forms_tags %}
+<!-- created user profile to show user details and profile pic -->
 {% block content %}
+<div class="profile-container">
 	<div class="media">
-<img class="rounded-circle account-img" src="{{ user.profile.image.url}}"/>
-<div class="media-body">
+    {% if user.profile.image %}
+    
+    <img  class ="rounded-circle account-img profile-pic" src="{{ user.profile.image.url }}" alt="{{ user.username }}" ><br>
+   
+{% else %}
+    <img  class ="rounded-circle account-img profile-pic" src="/media/profile_pics/default.jpg" alt="{{ user.username }}"><br>
+   
+{% endif %}
+</div>
+<div class="media-body info">
 	<h2 class="account-heading">{{user.username}}</h2>
-	<p class="text-secondary">{{ user.email }}</p>
+	
 </div>
 
 
-	</div>
+<form method="POST" enctype="multipart/form-data">
+    	{% csrf_token %}
+    	<fieldset class="form-group">
+    		<legend class="border-bottom mb-4">
+    			Profile Info
+    		</legend>
+    		{{ u_form|crispy }}
+    		{{ p_form|crispy }}
+    	</fieldset>
+    	<div class="form-group">
+    		<button class="btn btn-outline-info" type="submit">Update</button>
+    	</div>
+    </form>
+	
+</div>
 {% endblock %}
 

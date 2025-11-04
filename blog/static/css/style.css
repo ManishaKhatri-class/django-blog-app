@@ -30,3 +30,26 @@ body {
   color: #333;
   line-height: 1.6;
 }
+/*style profile image of user*/
+.profile-container {
+    display: flex;                /* required for justify-content to work */
+    justify-content: center;      /* centers horizontally */
+    align-items: center;          /* centers vertically (optional) */
+    flex-direction: column;       /* stack items vertically */
+    margin-top: 20px;
+}
+
+.profile-pic {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50%;           /* make it circular */
+    object-fit: cover;            /* crop to fit nicely */
+    border: 2px solid #333;
+    margin: 20px auto;            /* centers within container */
+}
+
+/*style profile infor of user*/
+.info{
+    margin-top: 40px !important;
+    align-content: left !important;
+}
