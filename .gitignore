@@ -1,0 +1,8 @@
+.env
+fix-author.py
+posts.json
+db.sqlite3
+
+/static/
+media/
+*.pyc
