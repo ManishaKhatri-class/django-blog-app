@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
-     "crispy_bootstrap5",
+     'crispy_bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,12 +43,21 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #allauth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+
 ]
+SITE_ID=1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -147,3 +156,4 @@ SENDGRID_API_KEY=config('SENDGRID_API_KEY')
 DEFAULT_FROM_EMAIL=config('DEFAULT_FROM_EMAIL')
 SENDGRID_SANDBOX_MODE_IN_DEBUG=False
 SENDGRIF_ECHO_TO_STDOUT=True
+SOCIALACCOUNT_LOGIN_ON_GET = True

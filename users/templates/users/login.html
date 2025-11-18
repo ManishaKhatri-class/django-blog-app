@@ -2,6 +2,8 @@
 
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
+{% load socialaccount %}
+
 {% block content %}
 	<div class="main">
     <form method="POST">
@@ -15,6 +17,8 @@
     	<div class="form-group">
     		<button class="btn btn-outline-info" type="submit">Log In</button>
     	</div>
+
+        
     </form>
     <div class="border-top pt-3">
         <small class="text-muted">
@@ -26,6 +30,10 @@
     	</small>
 
     </div>
+    <div class="container">
+            <a href="{% provider_login_url 'google' %}"><button class="btn btn-primary" >Log In with Google</button>
+            </a>
+        </div>
 	</div>
 {% endblock %}
 

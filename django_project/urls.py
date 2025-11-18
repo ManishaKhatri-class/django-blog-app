@@ -43,6 +43,7 @@ path(
 
 
     path('blog/', include('blog.urls')),
+    path('accounts/',include('allauth.urls')),
 
 ]
 
