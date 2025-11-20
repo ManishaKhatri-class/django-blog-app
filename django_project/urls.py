@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',user_views.register,name='register'),
@@ -44,6 +45,10 @@ path(
 
     path('blog/', include('blog.urls')),
     path('accounts/',include('allauth.urls')),
+     path('payments/', include('payments.urls')),
+    # path("donate/",views.donate_page,name="donate_page"),
+    # path("create-order/",views.create_donation_order,name="create_donation_order"),
+    # path("verify/",views.verify_donation,name="verify_donation"),
 
 ]
 

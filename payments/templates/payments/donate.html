@@ -1,0 +1,51 @@
+!-- Author: MANISHA RANI -->
+
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="container">
+	<h2>Donate to My Blog</h2>
+<input type="number" id="donation-amount" placeholder="Enter amount in INR" class="form-control mb-2">
+<button id="donate-btn" class="btn btn-primary">Donate</button>
+</div>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+document.getElementById("donate-btn").onclick = function() {
+    let amount = document.getElementById("donation-amount").value;
+    if (amount < 1) { alert("Enter a valid amount"); return; }
+
+    fetch(`/payments/create-order/?amount=${amount}`)
+    .then(res => res.json())
+    .then(data => {
+        if(data.error){
+            alert(data.error);
+            return;
+        }
+        var options = {
+            "key": data.key,
+            "amount": data.amount,
+            "currency": data.currency,
+            "order_id": data.order_id,
+            "name": "My Blog",
+            "description": "Donation",
+            "handler": function (response){
+                // Send details to backend to verify payment
+                let formData = new FormData();
+                formData.append("razorpay_order_id", response.razorpay_order_id);
+                formData.append("razorpay_payment_id", response.razorpay_payment_id);
+                formData.append("razorpay_signature", response.razorpay_signature);
+
+                fetch("/payments/verify/", {
+                    method: "POST",
+                    body: formData
+                }).then(res => res.json())
+                  .then(resp => alert(resp.status));
+            }
+        };
+        var rzp = new Razorpay(options);
+        rzp.open();
+    });
+};
+</script>
+
+{% endblock %}
+

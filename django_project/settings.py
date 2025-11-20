@@ -34,6 +34,7 @@ INSTALLED_APPS = [
 
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
+    'payments', 
     'crispy_forms',
      'crispy_bootstrap5',
     'django.contrib.admin',
@@ -157,3 +158,6 @@ DEFAULT_FROM_EMAIL=config('DEFAULT_FROM_EMAIL')
 SENDGRID_SANDBOX_MODE_IN_DEBUG=False
 SENDGRIF_ECHO_TO_STDOUT=True
 SOCIALACCOUNT_LOGIN_ON_GET = True
+#razorpay
+RAZORPAY_KEY_ID=config("RAZORPAY_KEY_ID")
+RAZORPAY_KEY_SECRET=config("RAZORPAY_KEY_SECRET")
